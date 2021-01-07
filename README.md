@@ -1,6 +1,4 @@
 # Capture/Replay Auto
-Capture/replay autonomous system for FRC robots
-
 ## Features
 - Record Xbox controller inputs to a file
 - Save multiple recordings on the roboRIO
@@ -10,11 +8,11 @@ Capture/replay autonomous system for FRC robots
 ## About
 - Files are saved in a binary format with a `.aut` file extension
 - Files are saved to `/home/lvuser/` on the roboRIO
-- SSH into the roboRIO as lvuser with default credentials
+- SSH into the roboRIO as `lvuser` with default credentials
 
 ## Contributors
-- The great guys from the Hawktimus Programming Subteam
+- The great guys and gals from the Hawktimus Programming Subteam
 - Our awesome mentors on Team 3229 Hawktimus Prime
-- Check out Team 3229's GitHub page here (https://github.com/Team3229)
 
+Check out Team 3229's robot code! (https://github.com/Team3229)
 Thanks to everyone that helped me make this system during the 2019-2020 FRC Robotics season!
