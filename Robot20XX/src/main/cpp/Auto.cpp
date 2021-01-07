@@ -28,9 +28,9 @@ Auto::~Auto()
   delete autoIntake;
 }
 
+// Put in Robot::AutonomousInit()
 void Auto::SetupPlayback()
 {
-  // Put in Robot::AutonomousInit
   // Get driver station info and setup
   inputFileName =
       frc::SmartDashboard::GetString(stationText, defaultFileName);
@@ -50,9 +50,9 @@ void Auto::ReadFile(cmd *inputs)
   }
 }
 
+// Put in Robot::TestInit()
 void Auto::SetupRecording()
 {
-  // Put in Robot::TestInit()
   inputFileName =
       frc::SmartDashboard::GetString(stationText, defaultFileName);
   debugCons("Writing instructions to /home/lvuser/" + inputFileName + ".aut\n");
@@ -60,18 +60,18 @@ void Auto::SetupRecording()
   cmdFile.Open(filePath, WRITE);
 }
 
+// Put in Robot::TestPeriodic()
 void Auto::Record(cmd *inputs)
 {
-  // Put in Robot::TestPeriodic()
   debugCons("Writing auto file...\n");
 
   // Write controller inputs
   cmdFile.Write(inputs, sizeof(*inputs));
 }
 
+// Put in Robot::DisabledInit()
 void Auto::CloseFile()
 {
-  // Put in Robot::DisabledInit()
   debugCons("File closed.\n");
   cmdFile.Close();
 }
