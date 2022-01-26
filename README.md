@@ -1,4 +1,7 @@
 # Capture/Replay Auto
+## Requirements
+- WPILib (https://github.com/wpilibsuite/allwpilib)
+
 ## Features
 - Record Xbox controller inputs to a file
 - Save multiple recordings on the roboRIO
