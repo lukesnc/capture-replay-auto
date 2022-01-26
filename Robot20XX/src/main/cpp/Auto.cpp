@@ -5,7 +5,7 @@
 
 #include "Auto.h"
 
-Auto::Auto(Drivetrain *c, Turret *t, Shooter *s, Limelight *v, Intake *i)
+Auto::Auto(Drivetrain* c, Turret* t, Shooter* s, Limelight* v, Intake* i)
 {
     // Passes in subsystems from Robot
     autoChassis = c;
@@ -32,14 +32,13 @@ Auto::~Auto()
 void Auto::SetupPlayback()
 {
     // Get driver station info and setup
-    inputFileName =
-        frc::SmartDashboard::GetString(stationText, defaultFileName);
+    inputFileName = frc::SmartDashboard::GetString(stationText, defaultFileName);
     debugCons("Reading auto instructions from /home/lvuser/" + inputFileName + ".aut\n");
     std::string filePath = "/home/lvuser/" + inputFileName + ".aut";
     cmdFile.Open(filePath, READ);
 }
 
-void Auto::ReadFile(cmd *inputs)
+void Auto::ReadFile(cmd* inputs)
 {
     if (!autoDone) {
         debugCons("Reading auto file...\n");
@@ -51,15 +50,14 @@ void Auto::ReadFile(cmd *inputs)
 // Put in Robot::TestInit()
 void Auto::SetupRecording()
 {
-    inputFileName =
-        frc::SmartDashboard::GetString(stationText, defaultFileName);
+    inputFileName = frc::SmartDashboard::GetString(stationText, defaultFileName);
     debugCons("Writing instructions to /home/lvuser/" + inputFileName + ".aut\n");
     std::string filePath = "/home/lvuser/" + inputFileName + ".aut";
     cmdFile.Open(filePath, WRITE);
 }
 
 // Put in Robot::TestPeriodic()
-void Auto::Record(cmd *inputs)
+void Auto::Record(cmd* inputs)
 {
     debugCons("Writing auto file...\n");
     // Write controller inputs

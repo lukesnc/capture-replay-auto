@@ -5,18 +5,17 @@
 
 #pragma once
 
+#include "Debug.h"
 #include <stdio.h>
 #include <string>
-#include "Debug.h"
 
-class CaptureFile
-{
+class CaptureFile {
 
 private:
     const int CHARSIZE = sizeof(char);
-    const char *fileName;
+    const char* fileName;
     std::string str_filePath;
-    FILE *fileHandle;
+    FILE* fileHandle;
     bool isWrite;
 
 public:
@@ -24,6 +23,6 @@ public:
     ~CaptureFile();
     void Open(std::string name, bool forWrite);
     void Close();
-    void Read(void *buffer, int bufsize);
-    void Write(void *buffer, int bufsize);
+    void Read(void* buffer, int bufsize);
+    void Write(void* buffer, int bufsize);
 };

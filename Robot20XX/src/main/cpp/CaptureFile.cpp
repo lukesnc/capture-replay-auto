@@ -12,7 +12,7 @@
 
 #include "CaptureFile.h"
 
-CaptureFile::CaptureFile() {}
+CaptureFile::CaptureFile() { }
 
 CaptureFile::~CaptureFile()
 {
@@ -31,7 +31,7 @@ void CaptureFile::Open(std::string name, bool forWrite)
 
     // Setup r/w perms
     isWrite = forWrite;
-    const char *perms = "rb";
+    const char* perms = "rb";
     if (isWrite)
         perms = "wb";
 
@@ -60,14 +60,14 @@ void CaptureFile::Close()
     fileHandle = NULL;
 }
 
-void CaptureFile::Read(void *buffer, int bufsize)
+void CaptureFile::Read(void* buffer, int bufsize)
 {
     if (fileHandle != NULL && buffer != NULL) {
         fread(buffer, CHARSIZE, bufsize, fileHandle);
     }
 }
 
-void CaptureFile::Write(void *buffer, int bufsize)
+void CaptureFile::Write(void* buffer, int bufsize)
 {
     if (fileHandle != NULL && buffer != NULL) {
         fwrite(buffer, CHARSIZE, bufsize, fileHandle);
