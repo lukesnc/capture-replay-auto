@@ -11,7 +11,7 @@
 ## About
 - Files are saved in a binary format with a `.aut` file extension
 - Files are saved to `/home/lvuser/` on the roboRIO
-- SSH into the roboRIO: `lvuser@roboRIO-3229-FRC.local` using default creds
+- SSH into the roboRIO: `lvuser@roboRIO-####-FRC.local` using default creds (replace `####` with your team #)
 - Access the recording features by starting the robot in Test mode in the Driver Station
 
 ## Contributors
